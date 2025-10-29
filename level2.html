@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colb Finance Memory Game - Level 2</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="honey-background"></div>
+  <div class="bee-swarm" id="beeSwarm"></div>
+  
+  <div class="game-container">
+    <div class="header-section">
+      <div class="logo-main">
+        <h1>COLB</h1>
+        <div class="logo-subtitle">MEMORY CHALLENGE</div>
+      </div>
+      
+      <div class="game-stats">
+        <div class="stat-box">
+          <div class="stat-label">TIME</div>
+          <div class="stat-value" id="time2">0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">MOVES</div>
+          <div class="stat-value" id="moves2">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="level-badge level2-badge">
+      <div class="badge-inner">LEVEL 2</div>
+    </div>
+
+    <p class="game-subtitle">Final level - Find all pairs!</p>
+    
+    <div id="game-board2" class="honeycomb-grid level2"></div>
+    
+    <button class="back-btn" onclick="window.location.href='index.html'">
+      ← BACK TO LEVEL 1
+    </button>
+  </div>
+
+  <div id="popup2" class="popup-overlay hidden">
+    <div class="popup-box victory-popup">
+      <div class="victory-animation">
+        <div class="big-trophy">🏆</div>
+        <div class="confetti">
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+          <div class="confetti-piece"></div>
+        </div>
+        <div class="bee-celebration">🐝 🐝 🐝</div>
+      </div>
+      <h2 class="popup-title victory-title">GAME COMPLETED!</h2>
+      <p class="victory-subtitle">You're a Memory Master! 🎉</p>
+      <div class="popup-stats victory-stats">
+        <div class="popup-stat-row">
+          <span class="stat-label-left">Level 1:</span>
+          <span class="stat-value-right"><span id="level1Time">0</span>s</span>
+        </div>
+        <div class="popup-stat-row">
+          <span class="stat-label-left">Level 2:</span>
+          <span class="stat-value-right"><span id="level2Time">0</span>s</span>
+        </div>
+        <div class="popup-stat-row total-row">
+          <span class="stat-label-left">TOTAL TIME:</span>
+          <span class="stat-value-right gold"><span id="totalTime">0</span>s</span>
+        </div>
+        <div class="popup-stat-row">
+          <span class="stat-label-left">Total Moves:</span>
+          <span class="stat-value-right"><span id="totalMoves">0</span></span>
+        </div>
+      </div>
+      <button class="popup-btn victory-btn" onclick="restartGame()">PLAY AGAIN 🎮</button>
+    </div>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>

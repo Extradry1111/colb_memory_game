@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colb Finance Memory Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="honey-background"></div>
+  <div class="bee-swarm" id="beeSwarm"></div>
+  
+  <div class="game-container">
+    <div class="header-section">
+      <div class="logo-main">
+        <h1>COLB</h1>
+        <div class="logo-subtitle">MEMORY CHALLENGE</div>
+      </div>
+      
+      <div class="game-stats">
+        <div class="stat-box">
+          <div class="stat-label">TIME</div>
+          <div class="stat-value" id="time">0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">MOVES</div>
+          <div class="stat-value" id="moves">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="level-badge">
+      <div class="badge-inner">LEVEL 1</div>
+    </div>
+
+    <p id="subtitle" class="game-subtitle">TAP ANY HONEYCOMB TO START!</p>
+    
+    <div id="game-board" class="honeycomb-grid level1"></div>
+  </div>
+
+  <div id="popup" class="popup-overlay hidden">
+    <div class="popup-box">
+      <div class="success-animation">
+        <div class="trophy-icon">🏆</div>
+        <div class="sparkles">✨✨✨</div>
+      </div>
+      <h2 class="popup-title">LEVEL 1 COMPLETE!</h2>
+      <div class="popup-stats">
+        <div class="popup-stat">
+          <span class="stat-icon">⏱</span>
+          <span id="finalTime">0</span>s
+        </div>
+        <div class="popup-stat">
+          <span class="stat-icon">🎯</span>
+          <span id="finalMoves">0</span> moves
+        </div>
+      </div>
+      <button class="popup-btn" id="nextLevelBtn">CONTINUE TO LEVEL 2 →</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
